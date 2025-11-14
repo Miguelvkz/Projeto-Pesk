@@ -32,7 +32,7 @@ catalogo.json: produtos e categorias
 usuarios.json: cadastro de usuários, senhas e dados de login
 
 Rotas REST para login, cadastro, carrinho e PeskClub
-
+```
 📁 Estrutura do Projeto
 Pesk/
 ├── frontend/
@@ -60,7 +60,7 @@ Pesk/
 │   │   ├── catalogo.json
 │   │   └── users.json
 │   └── package.json
-
+```
 🔐 Autenticação
 
 A autenticação é feita via JWT (JSON Web Token):
