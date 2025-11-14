@@ -1,0 +1,20 @@
+const tokensAtivos = require('./token')
+
+function autenticar(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    if (!authHeader) return res.status(401).json({ error: 'Header Authorization ausente' });
+
+    const parts = authHeader.split(' ');
+    if (parts.length !== 2 || parts[0] !== 'Bearer') {
+        return res.status(401).json({ error: 'Formato do Authorization inválido' });
+    }
+
+    const token = parts[1];
+    if (!tokensAtivos[token]) return res.status(401).json({ error: 'É necessário fazer login!' });
+
+    req.usuarioId = tokensAtivos[token]; // id do usuário logado
+    next();
+}
+// Verifica se user está logado para paginas protegidas
+
+module.exports = autenticar;
