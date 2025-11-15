@@ -32,38 +32,81 @@ catalogo.json: produtos e categorias
 usuarios.json: cadastro de usuários, senhas e dados de login
 
 Rotas REST para login, cadastro, carrinho e PeskClub
-```
-📁 Estrutura do Projeto
-Pesk/
-├── frontend/
-│   ├── home.html
-│   ├── cadastro.html
-│   ├── peskclub.html
-│   ├── style.css
-│   └── imagens/
-│       ├── icones/
-│       ├── Anuncios/
-│       ├── Categorias/
-│       └── Produtos/
-│
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   │   ├── entrar.js
-│   │   ├── carrinho.js
-│   │   └── club.js
-│   ├── middleware/
-│   │   ├── autenticacao.js
-│   │   ├── logger.js
-│   │   └── token.js
-│   ├── data/
-│   │   ├── catalogo.json
-│   │   └── users.json
-│   └── package.json
-```
-🔐 Autenticação
 
-A autenticação é feita via JWT (JSON Web Token):
+📁 Estrutura do Projeto
+<details>
+  <summary>📁 Pesk</summary>
+
+  <details>
+    <summary>📁 frontend</summary>
+
+    home.html  
+    cadastro.html  
+    peskclub.html  
+    style.css  
+
+    <details>
+      <summary>📁 imagens</summary>
+
+      <details>
+        <summary>📁 icones</summary>
+      </details>
+
+      <details>
+        <summary>📁 Anuncios</summary>
+      </details>
+
+      <details>
+        <summary>📁 Categorias</summary>
+      </details>
+
+      <details>
+        <summary>📁 Produtos</summary>
+      </details>
+
+    </details>
+
+  </details>
+
+  <details>
+    <summary>📁 backend</summary>
+
+    server.js  
+
+    <details>
+      <summary>📁 routes</summary>
+
+      entrar.js  
+      carrinho.js  
+      club.js  
+
+    </details>
+
+    <details>
+      <summary>📁 middleware</summary>
+
+      autenticacao.js  
+      logger.js  
+      token.js  
+
+    </details>
+
+    <details>
+      <summary>📁 data</summary>
+
+      catalogo.json  
+      users.json  
+
+    </details>
+
+    package.json  
+
+  </details>
+
+</details>
+
+
+
 
 Após o login, o token é salvo no localStorage do navegador.
 
