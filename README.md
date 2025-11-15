@@ -32,261 +32,424 @@ catalogo.json: produtos e categorias
 usuarios.json: cadastro de usuários, senhas e dados de login
 
 Rotas REST para login, cadastro, carrinho e PeskClub
-<details>
-  <summary><strong>📁 Estrutura do Projeto</strong></summary>
-<br>
+- .gitignore
+- Projeto-Pesk-main
+  - .gitignore
+  - Documentacao.docx
+  - Projeto-Pesk
+    - .gitignore
+    - README.md
+  - README.md
+  - Servidor
+    - Back-end
+      - data
+        - catalogo.json
+        - users.json
+      - middlewares
+        - autenticacao.js
+        - logger.js
+        - token.js
+      - rotas
+        - carrinho.js
+        - catalogo.js
+        - login.js
+    - Front-end
+      - cadastro.html
+      - carretilhas.html
+      - carrinho.html
+      - home.html
+      - imagens
+        - Anuncios
+          - anuncio-peskclub.png
+          - anuncio1.png
+          - anuncio2.png
+          - anuncio3.png
+        - Categorias
+          - categoria1.png
+          - categoria2.png
+          - categoria3.png
+          - categoria4.png
+          - categoria5.png
+          - categoria6.png
+        - icones
+          - close-eye.png
+          - icon-carrinho.png
+          - icon-perfil.png
+          - icon-redx.png
+          - icon.png
+          - logo.png
+          - open-eye.png
+          - peixe-fundo.png
+          - PESK.png
+        - Produtos
+          - Carretilhas
+            - Carretilha11
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha32
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha33
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha34
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha35
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha36
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha37
+              - img1.png
+              - img2.png
+              - img3.png
+            - Carretilha38
+              - img1.png
+              - img2.png
+              - img3.png
+          - Iscas
+            - Anzol6
+              - img1.png
+              - img2.png
+              - img3.png
+            - Boia10
+              - img1.png
+              - img2.png
+              - img3.png
+            - Boia15
+              - img1.png
+              - img2.png
+              - img3.png
+            - Isca18
+              - img1.png
+              - img2.png
+              - img3.png
+            - Isca39
+              - img1.png
+              - img2.png
+              - img3.png
+            - Isca4
+              - img1.png
+              - img2.png
+              - img3.png
+            - Isca40
+              - img1.png
+              - img2.png
+              - img3.png
+            - Isca41
+              - img1.png
+              - img2.png
+              - img3.png
+          - Linhas
+            - Linha3
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha42
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha43
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha44
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha45
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha46
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha47
+              - img1.png
+              - img2.png
+              - img3.png
+            - Linha48
+              - img1.png
+              - img2.png
+              - img3.png
+          - Molinets
+            - Molinete14
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete2
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete26
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete27
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete28
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete29
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete30
+              - img1.png
+              - img2.png
+              - img3.png
+            - Molinete31
+              - img1.png
+              - img2.png
+              - img3.png
+          - Outros
+            - Allicate8
+              - img1.png
+              - img2.png
+              - img3.png
+            - Balanca20
+              - img1.png
+              - img2.png
+              - img3.png
+            - Cadeira13
+              - img1.png
+              - img2.png
+              - img3.png
+            - Caixa12
+              - img1.png
+              - img2.png
+              - img3.png
+            - Caixa5
+              - img1.png
+              - img2.png
+              - img3.png
+            - Camisa19
+              - img1.png
+              - img2.png
+              - img3.png
+            - Chapeu7
+              - img1.png
+              - img2.png
+              - img3.png
+            - Lanterna22
+              - img1.png
+              - img2.png
+              - img3.png
+            - Peskclub-49
+              - PESKclub.png
+          - Varas
+            - Porta16
+              - img1.png
+              - img2.png
+              - img3.png
+            - Suporte9
+              - img1.png
+              - img2.png
+              - img3.png
+            - SupVara17
+              - img1.png
+              - img2.png
+              - img3.png
+            - Vara23
+              - img1.png
+              - img2.png
+              - img3.png
+            - Vara24
+              - img1.png
+              - img2.png
+              - img3.png
+            - Vara25
+              - img1.png
+              - img2.png
+              - img3.png
+            - varaShimanoFX6-6
+              - VaraShimano66-1.png
+              - VaraShimano66-2.png
+              - VaraShimano66.png
+            - varaTelescopiaGomo3m21
+              - img1.png
+              - img2.png
+              - img3.png
+        - sobre
+          - 10promo.png
+          - Brasil-preto-club.png
+          - Presente-preto-club.png
+        - Thumbs.db
+      - iscas.html
+      - linhas.html
+      - login.html
+      - molinetes.html
+      - naoautorizado.html
+      - outros.html
+      - peskclub.html
+      - sobre.html
+      - style.css
+      - telaproduto.html
+      - varas.html
+    - package-lock.json
+    - package.json
+    - server.js
+    - Thumbs.db
+- README.md
+- Servidor
+  - Back-end
+    - data
+      - catalogo.json
+      - users.json
+    - middlewares
+      - autenticacao.js
+      - logger.js
+    - rotas
+      - catalogo.js
+      - login.js
+  - Front-end
+    - cadastro.html
+    - carrinho.html
+    - home.html
+    - imagens
+      - Anuncios
+        - anuncio-peskclub.png
+        - anuncio1.png
+        - anuncio2.png
+        - anuncio3.png
+      - Categorias
+        - categoria1.png
+        - categoria2.png
+        - categoria3.png
+        - categoria4.png
+        - categoria5.png
+        - categoria6.png
+      - icones
+        - close-eye.png
+        - icon-carrinho.png
+        - icon-perfil.png
+        - icon-redx.png
+        - icon.png
+        - logo.png
+        - open-eye.png
+      - Produtos
+        - Carretilhas
+          - Carretilha11
+            - img1.png
+            - img2.png
+            - img3.png
+        - Iscas
+          - Anzol6
+            - img1.png
+            - img2.png
+            - img3.png
+          - Boia10
+            - img1.png
+            - img2.png
+            - img3.png
+          - Boia15
+            - img1.png
+            - img2.png
+            - img3.png
+          - Isca18
+            - img1.png
+            - img2.png
+            - img3.png
+          - Isca4
+            - img1.png
+            - img2.png
+            - img3.png
+        - Linhas
+          - Linha3
+            - img1.png
+            - img2.png
+            - img3.png
+        - Molinets
+          - Molinete14
+            - img1.png
+            - img2.png
+            - img3.png
+          - molinetearena4000
+            - img1.png
+            - img2.png
+            - img3.png
+        - Outros
+          - Allicate8
+            - img1.png
+            - img2.png
+            - img3.png
+          - Balanca20
+            - img1.png
+            - img2.png
+            - img3.png
+          - Cadeira13
+            - img1.png
+            - img2.png
+            - img3.png
+          - Caixa12
+            - img1.png
+            - img2.png
+            - img3.png
+          - Caixa5
+            - img1.png
+            - img2.png
+            - img3.png
+          - Camisa19
+            - img1.png
+            - img2.png
+            - img3.png
+          - Chapeu7
+            - img1.png
+            - img2.png
+            - img3.png
+          - Lanterna22
+            - img1.png
+            - img2.png
+            - img3.png
+        - Varas
+          - Porta16
+            - img1.png
+            - img2.png
+            - img3.png
+          - Suporte9
+            - img1.png
+            - img2.png
+            - img3.png
+          - SupVara17
+            - img1.png
+            - img2.png
+            - img3.png
+          - varaShimanoFX6-6
+            - VaraShimano66-1.png
+            - VaraShimano66-2.png
+            - VaraShimano66.png
+          - varaTelescopiaGomo3m
+            - img1.png
+            - img2.png
+            - img3.png
+      - sobre
+        - 10promo.png
+        - Brasil-preto-club.png
+        - Presente-preto-club.png
+      - Thumbs.db
+    - login.html
+    - naoautorizado.html
+    - peskclub.html
+    - style.css
+    - telapagamento.html
+    - telaproduto.html
+  - package-lock.json
+  - package.json
+  - server.js
+  - Thumbs.db
 
-📄 .gitignore
-<br>
-<details>
-  <summary><strong>📁 Projeto-Pesk-main</strong></summary>
-<br>
-
-&nbsp;&nbsp;&nbsp; ├── 📄 .gitignore
-&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; ├── 📄 Documentacao.docx
-&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Projeto-Pesk</summary>
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 .gitignore
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 README.md
-&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; ├── 📄 README.md
-&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; └── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <summary>📁 Servidor</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Back-end</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 data</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 catalogo.json
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 users.json
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 middlewares</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 autenticacao.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 logger.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 token.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <summary>📁 rotas</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 carrinho.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 catalogo.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 login.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Front-end</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 cadastro.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 carretilhas.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 carrinho.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 home.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 imagens</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Anuncios</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 anuncio-peskclub.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 anuncio1.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 anuncio2.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 anuncio3.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Categorias</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 categoria1.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 categoria2.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 categoria3.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 categoria4.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 categoria5.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 categoria6.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 icones</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 close-eye.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 icon-carrinho.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 icon-perfil.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 icon-redx.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 icon.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 logo.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 open-eye.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 peixe-fundo.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 PESK.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Produtos</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Carretilhas</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha11 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha32 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha33 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha34 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha35 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha36 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Carretilha37 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Carretilha38 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Iscas</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Anzol6 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Boia10 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Boia15 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Isca18 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Isca39 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Isca4 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Isca40 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Isca41 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Linhas</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha3 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha42 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha43 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha44 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha45 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha46 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Linha47 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Linha48 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Molinets</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete14 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete2 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete26 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete27 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete28 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete29 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Molinete30 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Molinete31 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 Outros</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Allicate8 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Balanca20 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Cadeira13 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Caixa12 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Caixa5 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Camisa19 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Chapeu7 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Lanterna22 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Peskclub-49 (PESKclub.png)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <summary>📁 Varas</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Porta16 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Suporte9 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 SupVara17 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Vara23 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Vara24 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Vara25 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 varaShimanoFX6-6 (3 arquivos .png)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 varaTelescopiaGomo3m21 (img1, img2, img3)</summary></details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 sobre</summary>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 10promo.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 Brasil-preto-club.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 Presente-preto-club.png
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 Thumbs.db
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 iscas.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 linhas.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 login.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 molinetes.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 naoautorizado.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 outros.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&Dnbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 peskclub.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 sobre.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 style.css
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 telaproduto.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 varas.html
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 package-lock.json
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 package.json
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 server.js
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 Thumbs.db
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </details>
-<br>
-</details>
 
 Após o login, o token é salvo no localStorage do navegador.
 
