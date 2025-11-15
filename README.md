@@ -32,7 +32,7 @@ catalogo.json: produtos e categorias
 usuarios.json: cadastro de usuários, senhas e dados de login
 
 Rotas REST para login, cadastro, carrinho e PeskClub
-
+```
 <details>
 <summary>📁 Estrutura do Projeto (Clique para expandir o código)</summary>
 - .gitignore
@@ -454,7 +454,7 @@ Rotas REST para login, cadastro, carrinho e PeskClub
   - Thumbs.db
 
 </details>
-
+```
 Após o login, o token é salvo no localStorage do navegador.
 
 As rotas protegidas do backend exigem o token no header:
