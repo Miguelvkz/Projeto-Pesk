@@ -32,79 +32,69 @@ catalogo.json: produtos e categorias
 usuarios.json: cadastro de usuários, senhas e dados de login
 
 Rotas REST para login, cadastro, carrinho e PeskClub
-
-📁 Estrutura do Projeto
 <details>
-  <summary>📁 Pesk</summary>
+  <summary><strong>📁 Pesk</strong></summary>
+<br>
 
-  <details>
-    <summary>📁 frontend</summary>
-
-    home.html  
-    cadastro.html  
-    peskclub.html  
-    style.css  
-
-    <details>
-      <summary>📁 imagens</summary>
-
-      <details>
-        <summary>📁 icones</summary>
-      </details>
-
-      <details>
-        <summary>📁 Anuncios</summary>
-      </details>
-
-      <details>
-        <summary>📁 Categorias</summary>
-      </details>
-
-      <details>
-        <summary>📁 Produtos</summary>
-      </details>
-
-    </details>
-
-  </details>
-
-  <details>
-    <summary>📁 backend</summary>
-
-    server.js  
-
-    <details>
-      <summary>📁 routes</summary>
-
-      entrar.js  
-      carrinho.js  
-      club.js  
-
-    </details>
-
-    <details>
-      <summary>📁 middleware</summary>
-
-      autenticacao.js  
-      logger.js  
-      token.js  
-
-    </details>
-
-    <details>
-      <summary>📁 data</summary>
-
-      catalogo.json  
-      users.json  
-
-    </details>
-
-    package.json  
-
-  </details>
-
+&nbsp;&nbsp;&nbsp; ├── <details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 frontend/</summary>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 home.html
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 cadastro.html
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 peskclub.html
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 style.css
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <summary>📁 imagens/</summary>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 icones/</summary></details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Anuncios/</summary></details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details><summary>📁 Categorias/</summary></details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <details><summary>📁 Produtos/</summary></details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
+&nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; </details>
+&nbsp;&nbsp;&nbsp; └── <details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <summary>📁 backend/</summary>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 server.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 routes/</summary>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 entrar.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 carrinho.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 club.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
+&nbsp;&nbsp;&F; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 middleware/</summary>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 autenticacao.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 logger.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 token.js
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <summary>📁 data/</summary>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── 📄 catalogo.json
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 users.json
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </details>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── 📄 package.json
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </details>
 </details>
-
 
 
 
